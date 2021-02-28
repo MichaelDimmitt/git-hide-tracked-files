@@ -37,3 +37,6 @@ git() {
   fi
 }
 ```
+## Example on a real world project:
+![image](https://user-images.githubusercontent.com/11463275/109428445-2a4ade80-79c5-11eb-9128-f0fd02fb38bc.png)
+
