@@ -1,5 +1,3 @@
-## 🚧 WIP still in progress please mind the dust. 👷‍♂️ 🚧
-
 ## git-hide-tracked-files
 
 ### .gitignore does not always work
@@ -31,7 +29,7 @@ git() {
   if [ "$1" == "add" ]; then
     $(which git) "$@"
     while IFS='' read -r LINE || [ -n "${LINE}" ]; do
-      echo "processing line: ${LINE}"
+      $(which git) reset HEAD $LINE;
     done < .hide_tracked
     # git reset HEAD 
   else
