@@ -13,7 +13,7 @@ quick setup using bash commands:
 ```bash
 {
 cd yourproject;
-if grep -q PATTERN file.txt; then echo "found"; echo "found2"; else echo "not found"; echo ".hide_tracked" >> .gitignore; fi
+if grep -q .hide_tracked .gitignore; then :; else echo ".hide_tracked" >> .gitignore; fi
 echo ".hide_tracked" >> .gitignore;
 echo "yourfile1.ext\nyourfile2.ext\nyourfile3.ext" > .hide_tracked;
 }
