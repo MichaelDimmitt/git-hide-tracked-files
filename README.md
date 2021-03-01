@@ -14,7 +14,6 @@ quick setup using bash commands:
 {
 cd yourproject;
 if grep -q .hide_tracked .gitignore; then :; else echo ".hide_tracked" >> .gitignore; fi
-echo ".hide_tracked" >> .gitignore;
 echo "yourfile1.ext\nyourfile2.ext\nyourfile3.ext" > .hide_tracked;
 }
 ```
