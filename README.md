@@ -30,9 +30,11 @@ echo "yourfile1.ext\nyourfile2.ext\nyourfile3.ext" > .hide_tracked;
 git() {
   if [ "$1" == "add" ]; then
     $(which git) "$@"
-    while IFS='' read -r LINE || [ -n "${LINE}" ]; do
-      $(which git) reset HEAD $LINE;
-    done < .hide_tracked
+    if [ -f "$FILE" ]; then
+      while IFS='' read -r LINE || [ -n "${LINE}" ]; do
+        $(which git) reset HEAD $LINE;
+      done < .hide_tracked
+    fi
     # git reset HEAD 
   else
     $(which git) "$@"
