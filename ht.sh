@@ -5,6 +5,6 @@ ht() {
   if_not_found_append_to_file "$newfile" ".hide_tracked"
 }
 if_not_found_append_to_file() {
-  # $1=filename, $2=pattern
-  if grep -q "$1" "$2"; then :; else echo "$1" >> $2; fi
+  # $1=pattern, $2=filename
+  [ -f "$2 ] if grep -q "$1" "$2"; then :; else echo "$1" >> $2; fi
 }
