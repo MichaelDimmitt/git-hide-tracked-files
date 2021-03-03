@@ -28,14 +28,15 @@ echo "yourfile1.ext\nyourfile2.ext\nyourfile3.ext" > .hide_tracked;
 
 ```bash
 git() {
-  if [ "$1" == "add" ]; then
+  if [ "$1" == "check" ]; then
+    bash <(curl -s https://raw.githubusercontent.com/MichaelDimmitt/git_check_computer/master/git_check_computer.sh)
+  elif [ "$1" == "add" ]; then
     $(which git) "$@"
-    if [ -f "$FILE" ]; then
+    if [ -f ".hide_tracked" ]; then
       while IFS='' read -r LINE || [ -n "${LINE}" ]; do
         $(which git) reset HEAD $LINE;
       done < .hide_tracked
     fi
-    # git reset HEAD 
   else
     $(which git) "$@"
   fi
