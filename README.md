@@ -42,5 +42,16 @@ git() {
 ## Example on a real world project:
 ![image](https://user-images.githubusercontent.com/11463275/109428445-2a4ade80-79c5-11eb-9128-f0fd02fb38bc.png)
 
-## ht - command coming soon 
-Does all setup for hide tracked in a user friendly way.
+## ht - How does this function work?
+The ht function makes setup and adding a new files to .hide_tracked easy and user friendly 🎉
+1) add the contents of `packaged-bashrc-stuff.sh` to your bashrc if you are using bash.
+2) source your bash shell. 
+3) cd to your project and type: `ht`</br>
+This will run all of the setup needed for the repo.</br> 
+It does not ever get tracked in your codebase!</br>
+And it will prompt you for a file name to add to .hide_tracked each time.</br>
+If you think you can improve this section please open an issue in this github project.
+4) future invocations of ht will prompt for new file names to add to .hide_tracked! 🎉
+5) to remove items from .hide_tracked, open the file and delete the lines using vim or other editor.
+
+
