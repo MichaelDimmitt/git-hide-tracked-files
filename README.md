@@ -1,3 +1,6 @@
+#### Info:
+To see all overrides navigate to: https://github.com/MichaelDimmitt/my-bashrc-git-overrides
+
 ## git-hide-tracked-files
 
 ### .gitignore does not always work
